@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Project built for Codecademy Jammming - Create a Playlist App with the Spotify API project as part of their Front-End Engineer coursework.
+
+[View Project Requirements Here](https://www.codecademy.com/paths/front-end-engineer-career-path/tracks/fecp-22-react-part-ii/modules/wdcp-22-jammming/projects/jammming-prj)
+
+## Running Notes
+
+### 2/10/23
+
+- Started project
+- Paused at Pass Down Search Result and Render Result List #29
+- Need to set up Stylelint + Prettier (or switch to eslint if needed)
+- Verifying GitHub link still works
+
