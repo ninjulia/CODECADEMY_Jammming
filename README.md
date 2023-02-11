@@ -68,9 +68,16 @@ When working with new technologies, it's important to continue practicing to sol
 - Need to set up Stylelint + Prettier (or switch to eslint if needed)
 - Verifying GitHub link still works
 
-### 2/11/23
+### 2/11/23 (29-35)
 
 - Project clean up
 - Fixed syntax issues
-- Stuck at #34 - Use the .map() method to render each track in the tracks property. Keep getting the following error: 'Uncaught TypeError: Cannot read properties of undefined (reading 'map')'
+- Stuck at #34 - Use the .map() method to render each track in the tracks property. Keep getting the following error: 'Uncaught TypeError: Cannot read properties of undefined (reading 'map')' ** [Solution](https://discuss.codecademy.com/t/passed-state-is-undefined-in-child-component/456755) was to comment out reference to <TrackList /> in <PlayList /> for now? **
 - Skipped ahead to #35 to Render track name, artist and album in Track.js file
+
+### 2/11/23 (36-73)
+
+- Allow songs to be add/removed from playlist from search results
+- Allow user to change name of playlist
+- Placeholder functionality to add playist to user's account
+- Placeholder functionality to search Spotify
