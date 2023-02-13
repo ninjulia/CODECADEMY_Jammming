@@ -11,7 +11,7 @@ This is a solution to the ["Jammming" Playlist App with Spotify API from Codecad
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
+  - [Project ](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Running Notes](#running-notes)
@@ -20,10 +20,11 @@ This is a solution to the ["Jammming" Playlist App with Spotify API from Codecad
 
 ### The challenge
 
-Users should be able to:
+Build a React web application using provided HTML & CSS. Users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+- Search Spotify for artist, song, or album
+- Create a playlist from search results
+- Save playlist to their Spotify account
 
 ### Screenshot
 
@@ -44,16 +45,17 @@ Users should be able to:
 
 ### What I learned
 
-This is my first time working with REACT technologies.
+This is my first time working with REACT technologies. While I felt confident going through the Codecademy lessons, I got stuck several times doing the actual work. I found a walk through video which I used to verify code I had already written and help to understand the _why_ behind the solutions.
 
 ### Continued development
 
-When working with new technologies, it's important to continue practicing to solidify concepts. This project was a great introduction to the build processes involved in creating with React. Codecademy provided the HTML, CSS, and a step-by-step breakdown of tasks to turn the snippets into a fully functioning app. In the future, I'll need to practice taking projects from start to finish on my own.
+When working with new technologies, it's important to continue practicing to solidify concepts. There were several steps I would have been completely lost on if it weren't for the walk-through video. In the future, I'll look for simple projects I can undertake to boost my confidence in completing a project 100% on my own.
 
 ### Useful resources
 
 - Create React App documentation [https://create-react-app.dev/](https://create-react-app.dev/)
-- Project Walkthrough [https://www.youtube.com/watch?v=DH991Dzb9iE](https://www.youtube.com/watch?v=DH991Dzb9iE)
+- Project Walk-through [https://www.youtube.com/watch?v=DH991Dzb9iE](https://www.youtube.com/watch?v=DH991Dzb9iE)
+- Using Enter Key Event in React [Singhal,Gaurav (May 28, 2020). How to Use the Enter Key Event Handler on a React-Bootstrap Input Component. Pluralsight](https://www.pluralsight.com/guides/how-to-enter-key-event-handler-on-a-react-bootstrap-input-component)
 
 ## Author
 
@@ -79,5 +81,17 @@ When working with new technologies, it's important to continue practicing to sol
 
 - Allow songs to be add/removed from playlist from search results
 - Allow user to change name of playlist
-- Placeholder functionality to add playist to user's account
+- Placeholder functionality to add playlist to user's account
 - Placeholder functionality to search Spotify
+
+### 2/12/23 (74-88)
+
+- Get a Spotify user’s access token
+- Send a search request to the Spotify API
+- Set logic on the search field and button to submit search term either via clicking the button or pressing "ENTER" key (with help from [Pluralsite.com](https://www.pluralsight.com/guides/how-to-enter-key-event-handler-on-a-react-bootstrap-input-component).)
+
+### 2/12/23 (89-96)
+
+- Save playlist to user's account
+- Send a search request to the Spotify API
+- Fixed issue with Playlist name resetting. Updated to <input value={this.state.playlistName} />
