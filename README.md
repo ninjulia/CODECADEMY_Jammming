@@ -95,3 +95,8 @@ When working with new technologies, it's important to continue practicing to sol
 - Save playlist to user's account
 - Send a search request to the Spotify API
 - Fixed issue with Playlist name resetting. Updated to <input value={this.state.playlistName} />
+
+### 2/13/23 (96-99)
+
+- Deployed via Netlify CLI since I already use their hosting services (Codecademy provided instructions for surge).
+- Leveraged Environmental Variables for storing Spotify API key, linked via netlify-cli package

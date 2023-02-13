@@ -1,5 +1,6 @@
-const clientId = "clientIDHere";
-const redirectUri = "http://localhost:3000/";
+const clientId = `${process.env.REACT_APP_API_KEY}`;
+const redirectUri = "https://candid-wisp-e78ad8.netlify.app/";
+//const redirectUri = "http://localhost:8888/";
 let accessToken;
 
 const Spotify = {
