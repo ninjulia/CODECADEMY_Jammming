@@ -33,7 +33,7 @@ Build a React web application using provided HTML & CSS. Users should be able to
 ### Links
 
 - Solution URL: [https://github.com/ninjulia/jammming](https://github.com/ninjulia/jammming/)
-- Live Site URL: [https://ninjulia.github.io/jammming](https://ninjulia.github.io/jammming/)
+- Live Site URL: [https://candid-wisp-e78ad8.netlify.app/](https://candid-wisp-e78ad8.netlify.app/)
 
 ## My process
 
@@ -100,3 +100,10 @@ When working with new technologies, it's important to continue practicing to sol
 
 - Deployed via Netlify CLI since I already use their hosting services (Codecademy provided instructions for surge).
 - Leveraged Environmental Variables for storing Spotify API key, linked via netlify-cli package
+
+### 2/13/23 Part 2 - Potential Playlist Enhancements
+
+- Require login before interacting with app
+- Only display songs not currently present in the playlist in the search results
+- Add song back to search results if removed from Playlist
+- Update the access token logic to expire at exactly the right time, instead of setting expiration from when the user initiates their next search

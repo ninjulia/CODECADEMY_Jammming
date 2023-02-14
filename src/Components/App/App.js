@@ -13,6 +13,7 @@ class App extends React.Component {
 			searchResults: [],
 			playlistName: "My Playlist",
 			playlistTracks: [],
+			counter: 0,
 		};
 		this.addTrack = this.addTrack.bind(this);
 		this.removeTrack = this.removeTrack.bind(this);
@@ -30,12 +31,24 @@ class App extends React.Component {
 		//if not in list, add it
 		tracks.push(track);
 		this.setState({ playlistTracks: tracks });
+
+		//remove from searchResults
+		let searches = this.state.searchResults;
+		const removeSelected = searches.filter((list) => {
+			return list !== track;
+		});
+		this.setState({ searchResults: removeSelected });
 	}
 
 	removeTrack(track) {
 		let tracks = this.state.playlistTracks;
 		tracks = tracks.filter((currentTrack) => currentTrack.id !== track.id);
 		this.setState({ playlistTracks: tracks });
+
+		//add back to search results
+		let searches = this.state.searchResults;
+		searches.push(track);
+		this.setState({ searchResults: searches });
 	}
 
 	updatePlaylistName(name) {
@@ -54,6 +67,9 @@ class App extends React.Component {
 	}
 
 	search(term) {
+		if (!term) {
+			return;
+		}
 		Spotify.search(term).then((searchResults) => {
 			this.setState({ searchResults: searchResults });
 		});
@@ -83,6 +99,20 @@ class App extends React.Component {
 				</div>
 			</div>
 		);
+	}
+
+	componentDidMount() {
+		//check if user is logged into Spotify before allowing any interaction
+		window.addEventListener("load", () => {
+			Spotify.getAccessToken();
+		});
+
+		const interval = setInterval(Spotify.getAccessToken, Spotify.getExpiry());
+		this.setState({ interval });
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.state.interval);
 	}
 }
 

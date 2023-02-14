@@ -3,7 +3,17 @@ const redirectUri = "https://candid-wisp-e78ad8.netlify.app/";
 //const redirectUri = "http://localhost:8888/";
 let accessToken;
 
+const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
+
 const Spotify = {
+	getExpiry() {
+		if (expiresInMatch) {
+			const expiresIn = Number(expiresInMatch[1] * 1000);
+			return expiresIn;
+		} else {
+			return;
+		}
+	},
 	//authenticate user
 	getAccessToken() {
 		if (accessToken) {
@@ -12,7 +22,6 @@ const Spotify = {
 
 		// check for access token match
 		const accessTokenMatch = window.location.href.match(/access_token=([^&]*)/);
-		const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);
 
 		if (accessTokenMatch && expiresInMatch) {
 			accessToken = accessTokenMatch[1];
