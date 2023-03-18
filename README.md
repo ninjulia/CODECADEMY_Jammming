@@ -34,6 +34,7 @@ Build a React web application using provided HTML & CSS. Users should be able to
 
 - Solution URL: [https://github.com/ninjulia/jammming](https://github.com/ninjulia/jammming/)
 - Live Site URL: [https://candid-wisp-e78ad8.netlify.app/](https://candid-wisp-e78ad8.netlify.app/)
+- Hosting via Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/46d8e6e3-9422-49f3-99de-1594f29bfce7/deploy-status)](https://app.netlify.com/sites/candid-wisp-e78ad8/deploys)
 
 ## My process
 
