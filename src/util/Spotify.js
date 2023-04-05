@@ -1,6 +1,14 @@
-const clientId = `${process.env.REACT_APP_API_KEY}`;
-const redirectUri = "https://candid-wisp-e78ad8.netlify.app/";
-//const redirectUri = "http://localhost:8888/";
+const clientId = `${process.env.REACT_APP_API_KEY}`; //defined in Netlify
+
+//set redirectUri based on dev or prod env, defined in Spotify Dev Dashboard
+let redirectUri;
+
+if (process.env.NODE_ENV === "development") {
+	redirectUri = "http://localhost:8888/";
+} else {
+	redirectUri = "https://candid-wisp-e78ad8.netlify.app/";
+}
+
 let accessToken;
 
 const expiresInMatch = window.location.href.match(/expires_in=([^&]*)/);

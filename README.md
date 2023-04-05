@@ -2,6 +2,21 @@
 
 This is a solution to the ["Jammming" Playlist App with Spotify API from Codecademy](https://www.codecademy.com/paths/front-end-engineer-career-path/tracks/fecp-22-react-part-ii/modules/wdcp-22-jammming/projects/jammming-prj). This project is part of their Front-End Engineer Training Course.
 
+## Installing / Getting started
+
+Spotify API Key is defined in Netlify Environmental Variable. You MUST use Netlify to access the project in development. Using the `npm start` command will throw errors since `create-react-app` doesn't have access to the variable.
+
+```shell
+npx netlify dev # spins up Server on http://localhost:8888
+```
+
+The Spotify [learnReact-jammming](https://developer.spotify.com/dashboard/f8e592bcf7574f50979cfcde18fa1d9d) app only accepts traffic from two domains:
+
+- http://localhost:8888/
+- https://candid-wisp-e78ad8.netlify.app/
+
+This is set using the NODE_ENV variable in `src\util\Spotify.js`.
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -28,11 +43,11 @@ Build a React web application using provided HTML & CSS. Users should be able to
 
 ### Screenshot
 
-[screenshot](https://ninjulia.github.io/jammming/screenshot.png)
+![screenshot](./screenshot.PNG?raw=true)
 
 ### Links
 
-- Solution URL: [https://github.com/ninjulia/jammming](https://github.com/ninjulia/jammming/)
+- Solution URL: [https://github.com/ninjulia/CODECADEMY_Jammming/](https://github.com/ninjulia/CODECADEMY_Jammming/)
 - Live Site URL: [https://candid-wisp-e78ad8.netlify.app/](https://candid-wisp-e78ad8.netlify.app/)
 - Hosting via Netlify: [![Netlify Status](https://api.netlify.com/api/v1/badges/46d8e6e3-9422-49f3-99de-1594f29bfce7/deploy-status)](https://app.netlify.com/sites/candid-wisp-e78ad8/deploys)
 
